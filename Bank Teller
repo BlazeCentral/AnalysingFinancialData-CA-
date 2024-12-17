@@ -1,0 +1,71 @@
+checking_balance = 0
+savings_balance = 0
+
+def make_deposit(account_type, amount, checking_balance, savings_balance):
+    deposit_status = ""
+    if amount > 0:
+        if account_type == "savings":
+            savings_balance += amount
+            deposit_status = "Sucessful"
+        elif account_type == "checking":
+            checking_balance += amount
+            deposit_status = "Sucessful"
+        else:
+            deposit_status = "Unsuccessful, must enter checking or savings"
+    else: 
+        print("Unsuccessful, amount must be greater than 0.")
+    deposit_statement = " Deposit of " + str(amount) + " to your " + str(account_type) + " account was " + deposit_status
+    print(deposit_statement)
+    return(savings_balance, checking_balance)
+
+
+def make_withdrawal(account_type, amount, checking_balance, savings_balance):
+    withdrawal_status = ""
+    fail = "Unsuccessful, please enter amount less than balance." 
+    if  account_type == savings_balance
+        if amount >= savings_balance:
+            withdrawal_status = fail
+        else
+            savings_balance -= amount
+            withdrawal_status = "successful"
+    elif account_type == checking_balance:
+        if amount >= checking_balance:
+            withdrawal_status = fail
+        else:
+            checking_balance -= amount
+            withdrawal_status = "sucessful"
+    else:
+        withdrawal_status = "unsuccessful, ensure you entered checking or saving"
+    withdrawal_statement =  "Withdrawal of " + amount + " from your " + account_type + " was " + withdrawal_status
+    print(withdrawal_statement)
+    return(savings_balance, checking_balance)
+
+
+def acc_transfer(acc_from, acc_to, amount, checking_balance, savings_balance):
+    transaction_status = ""
+    trans_error = "unsuccessful, please enter amount less than "
+    if acc_from == "saving" and acc_to == "checking":
+        if amount >= savings_balance:
+            print(trans_error + str(savings_balance))
+        else:
+            #transfer
+            savings_balance -= amount
+            checking_balance += amount
+            transaction_status = "successful"
+            
+
+    elif acc_from == "checking" and acc_to == "saving":
+        if amount >= checking_balance:
+            print(trans_error + str(checking_balance))
+        else:
+            #transfer
+            checking_balance -= amount
+            savings_balance += amount
+            transaction_status = "successful"
+    else:
+        transaction_status = "unsuccessful, please enter savings or checkings"
+    transfer_statement = "Transfer of " + str(amount) + " from your " + str(acc_from) + " to_your " + str(acc_to) + " account was " + str(transaction_status)
+    print(transfer_statement)
+    return savings_balance, checking_balance
+
+
