@@ -2,4 +2,4 @@
 Projects completed on the Codecademy course Analysing Financial Data With Python
 
 Project 1: Write Initials With ASCII (done)
-Project 2:
+Project 2: Develop Reciept Creation System for small business (done)
