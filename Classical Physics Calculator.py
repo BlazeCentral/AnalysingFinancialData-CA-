@@ -34,8 +34,20 @@ print("The GE train supplies " + str(train_force) + " Newtons of force")
 
 
 # Energy
-def get_energy(mass, c)
+def get_energy(mass, c):
   energy = mass * c
   return energy
   
+# test energy
+bomb_energy = get_energy(bomb_mass, c)
+print("A 1kg bomb supplies " + str(bomb_energy) + " Joules")
 
+# Work
+def get_work(mass, acceleration, distance):
+  force = get_force(mass, acceleration)
+  work = force * distance
+  return work
+
+# test work
+train_work = get_work(train_mass, train_acceleration, train_distance)
+print("The GE train does " + str(train_work) + " over " + str(train_distance) + " metres.")
