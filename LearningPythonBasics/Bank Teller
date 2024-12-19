@@ -1,6 +1,6 @@
 checking_balance = 0
 savings_balance = 0
-
+#May have bugs as imported from Jupiter Notebook
 def make_deposit(account_type, amount, checking_balance, savings_balance):
     deposit_status = ""
     if amount > 0:
